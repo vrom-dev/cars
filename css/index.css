@@ -1,0 +1,99 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3em;
+}
+.button {
+  border: none;
+  padding: 0.8em;
+  margin: 1em;
+  border-radius: 0.4em;
+  background-color: #5900ff;
+  color: #fff;
+  font-size: 1.1em;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s;
+}
+.button:hover {
+  background-color: #00ffb3;
+  color: #20704b;
+}
+.button:active {
+  transform: scale(0.98);
+}
+
+.grid {
+  margin: 3em;
+}
+.car {
+  width: 75px;
+  height: 75px;
+  margin-left: 0;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+
+.car > img {
+  height: 50px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.road {
+  background: url("../img/road.png");
+  background-size: contain;
+  width: 800px;
+  height: 90px;
+  border: 2px solid gray;
+  margin: 1px auto;
+  position: relative;
+}
+.road::after {
+  content: "";
+  background: url("../img/meta.png");
+  background-size: contain;
+  display: block;
+  position: absolute;
+  width: 25px;
+  height: 90px;
+  right: -25px;
+  top: -3px;
+  border: 2px solid gray;
+  margin: 1px auto;
+}
+
+.road::before {
+  content: "";
+  background: url("../img/start.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: repeat-y;
+  display: block;
+  position: absolute;
+  background-color: #5900ff;
+  width: 50px;
+  height: 90px;
+  left: -50px;
+  top: -3px;
+  border: 2px solid gray;
+  margin: 1px auto;
+}
